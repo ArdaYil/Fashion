@@ -1,0 +1,19 @@
+
+
+@use "sass:math";
+
+@function responsiveText($size) {
+    @if (math.is-unitless($size)) {
+        @return math.div($size, 16);
+    }
+
+    @error("Input cannot have a unit");
+}
+
+@function em($size) {
+    @return responsiveText($size) + em;
+}
+
+@function rem($size) {
+    @return responsiveText($size) + rem;
+}

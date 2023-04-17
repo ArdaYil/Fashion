@@ -1,0 +1,23 @@
+
+
+:root {
+    --body-background: #000000;
+    --text-primary: #FFFFFF;
+    --text-secondary: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: auto;
+    display: inline-block;
+}
+
+body {
+    background-color: var(--body-background);
+    color: var(--text-primary)
+}
