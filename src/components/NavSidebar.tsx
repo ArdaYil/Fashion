@@ -32,7 +32,14 @@ export default function NavSidebar({ isOpen, onNavSidebarClose }: Props) {
           </Link>
         </li>
         <li>
-          <Link className="nav-sidebar__body-item" to="/"></Link>
+          <Link className="nav-sidebar__body-item" to="/">
+            Blog
+          </Link>
+        </li>
+        <li>
+          <Link className="nav-sidebar__body-item" to="/">
+            Products
+          </Link>
         </li>
       </ul>
     </aside>
