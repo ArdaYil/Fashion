@@ -1,5 +1,7 @@
 import NavButton from "./NavButton";
 import "../../cssDist/index.css";
+import CartButton from "./CartButton";
+import Title from "./Title";
 
 export default function () {
   const handleNavClick = () => {};
@@ -7,8 +9,8 @@ export default function () {
   return (
     <nav className="nav-bar">
       <NavButton onClick={handleNavClick} />
-      <h1>Fashion</h1>
-      <img src="../../public/images/cart.png" />
+      <Title />
+      <CartButton />
     </nav>
   );
 }

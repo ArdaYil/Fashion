@@ -3,5 +3,13 @@
 @use "../util/" as u;
 
 .img-sm {
-    width: u.em(25);
+    $size: 40;
+
+    width: u.em($size);
+    height: u.em($size);
+}
+
+.title {
+    font-size: u.fontSize(16, 24, 32);
+    font-weight: 600;
 }
