@@ -1,0 +1,19 @@
+
+
+@use "../util/" as u;
+
+$xs: 25;
+$sm: 40;
+
+@mixin size($size) {
+    width: u.em($size);
+    height: u.em($size);
+}
+
+.xs {
+    @include size($xs);
+}
+
+.sm {
+    @include size($sm);
+}

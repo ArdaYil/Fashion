@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
 
-export default function Title() {
-  return (
-    <Link to="/" className="nav-bar__title title">
+interface Props {
+  noLink?: boolean;
+  className?: string;
+}
+
+export default function Title({ noLink, className }: Props) {
+  const titleClass = className ? `title ${className}` : "";
+
+  return !noLink ? (
+    <Link to="/" className={titleClass}>
       Fashion
     </Link>
+  ) : (
+    <h2 className={titleClass}>Fashion</h2>
   );
 }

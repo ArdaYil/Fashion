@@ -2,9 +2,11 @@
 @use "../util" as u;
 
 :root {
-    --body-background: #000000;
-    --text-primary: #FFFFFF;
-    --text-secondary: #000000;
+    --clr-primary: #000000;
+    --clr-primary-200: #242424;
+    --clr-secondary: #FFFFFF;
+    --text-primary: var(--clr-secondary);
+    --text-secondary: var(--clr-primary);
 }
 
 * {
@@ -19,11 +21,20 @@ img {
 }
 
 body {
-    background-color: var(--body-background);
+    background-color: var(--clr-primary);
     color: var(--text-primary)
 }
 
 h1, h2, h3, h4, h5, h6, p {
     font-size: u.rem(16);
     font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.list {
+    list-style: none;
 }
