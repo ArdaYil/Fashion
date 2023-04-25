@@ -1,0 +1,34 @@
+
+
+@use "../util" as u;
+
+.hero {
+    background-color: var(--clr-secondary);
+    margin-inline: u.em(20);
+    padding: u.em(20);
+    border-radius: u.em(10);
+    margin-bottom: u.em(45);
+
+    &__image {
+        width: u.em(300);
+        margin-bottom: u.em(15);
+    }
+
+    &__heading {
+        color: var(--text-secondary);
+        width: u.em(130);
+        margin-bottom: u.em(20);
+    }
+
+    &__check-out {
+        color: var(--text-secondary);
+        font-size: u.fontSize(16, 14, 20) !important;
+        font-weight: 700;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

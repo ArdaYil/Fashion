@@ -1,0 +1,23 @@
+
+
+@use "../util" as u;
+
+.product-brands {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: u.em(70);
+
+    &__brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__image {
+            width: u.em(350);
+        }
+
+        &__buy {
+
+        }
+    }
+}

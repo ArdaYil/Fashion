@@ -5,6 +5,7 @@
     --clr-primary: #000000;
     --clr-primary-200: #242424;
     --clr-secondary: #FFFFFF;
+    --clr-orange: #FF7A00;
     --text-primary: var(--clr-secondary);
     --text-secondary: var(--clr-primary);
 }
@@ -33,6 +34,7 @@ h1, h2, h3, h4, h5, h6, p {
 a {
     text-decoration: none;
     color: var(--text-primary);
+    display: inline-block;
 }
 
 .list {

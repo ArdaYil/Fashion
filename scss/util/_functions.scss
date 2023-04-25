@@ -19,7 +19,7 @@
 }
 
 @function fontSize($min, $prefered, $max) {
-    $fontSizeIncrease: 2vw;
+    $fontSizeIncrease: 1.2vw;
 
     @return clamp(rem($min), rem($prefered) + $fontSizeIncrease, rem($max));
 }
