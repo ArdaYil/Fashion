@@ -1,0 +1,43 @@
+
+@use "../util" as u;
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__text {
+            margin-block: u.em(5);
+        }
+    }
+
+    &__icon {
+        $size: 40;
+        
+        width: u.em($size);
+        height: u.em($size);
+    }
+
+    &__title-section {
+        align-items: flex-start;
+        margin-left: u.em(20);
+    }
+
+    &__section-icon-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 60%;
+        margin-inline: auto;
+        margin-block: u.em(40);
+        column-gap: u.em(20);
+        justify-items: center;
+    }
+
+    &__title {
+        margin-bottom: u.em(4);
+    }
+}

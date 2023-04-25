@@ -5,7 +5,8 @@
 .product-brands {
     display: grid;
     grid-template-columns: 1fr;
-    gap: u.em(70);
+    gap: u.em(90);
+    margin-bottom: u.em(100);
 
     &__brand {
         display: flex;
@@ -13,11 +14,16 @@
         align-items: center;
 
         &__image {
-            width: u.em(350);
+            width: u.em(300);
+            margin-bottom: u.em(20);
+        }
+
+        &__heading {
+            margin-bottom: u.em(10);
         }
 
         &__buy {
-
+            font-size: u.fontSize(16, 12, 20);
         }
     }
 }

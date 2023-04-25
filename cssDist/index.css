@@ -105,6 +105,9 @@ a {
   padding: 1.25em;
   border-radius: 0.625em;
   margin-bottom: 2.8125em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero__image {
   width: 18.75em;
@@ -114,6 +117,7 @@ a {
   color: var(--text-secondary);
   width: 8.125em;
   margin-bottom: 1.25em;
+  margin-left: 0.625em;
 }
 .hero__check-out {
   color: var(--text-secondary);
@@ -129,7 +133,8 @@ a {
 .product-brands {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4.375em;
+  gap: 5.625em;
+  margin-bottom: 6.25em;
 }
 .product-brands__brand {
   display: flex;
@@ -137,11 +142,53 @@ a {
   align-items: center;
 }
 .product-brands__brand__image {
-  width: 21.875em;
+  width: 18.75em;
+  margin-bottom: 1.25em;
 }
+.product-brands__brand__heading {
+  margin-bottom: 0.625em;
+}
+.product-brands__brand__buy {
+  font-size: clamp(1rem, 0.75rem + 1.2vw, 1.25rem);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__section__text {
+  margin-block: 0.3125em;
+}
+.footer__icon {
+  width: 2.5em;
+  height: 2.5em;
+}
+.footer__title-section {
+  align-items: flex-start;
+  margin-left: 1.25em;
+}
+.footer__section-icon-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 60%;
+  margin-inline: auto;
+  margin-block: 2.5em;
+  -moz-column-gap: 1.25em;
+       column-gap: 1.25em;
+  justify-items: center;
+}
+.footer__title {
+  margin-bottom: 0.25em;
+}
+
 .title {
   font-size: clamp(1rem, 1.5rem + 1.2vw, 2rem);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .xs {
