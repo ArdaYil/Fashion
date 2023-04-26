@@ -1,6 +1,13 @@
 import Navigation from "./components/Navigation";
+import ProductData from "./ProductData";
 
-export default function Products() {
+interface Props {
+  category: string;
+}
+
+export default function Products({ category }: Props) {
+  const products = ProductData[category];
+
   return (
     <div>
       <Navigation />
