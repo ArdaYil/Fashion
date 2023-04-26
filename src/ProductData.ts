@@ -1,8 +1,14 @@
 import Colors from "./Colors";
+import ProductInterface from "./interfaces/ProductInterface";
+
+interface ProductDataInterface {
+  [key: string]: ProductDataInterface;
+}
 
 export default {
   nike: {
     "Nike Jordans 1 High": {
+      id: "nike-jordans-1-high",
       title: "Nike Jordans 1 High",
       price: 420,
       colors: [Colors.RED, Colors.YELLOW, Colors.BLUE],

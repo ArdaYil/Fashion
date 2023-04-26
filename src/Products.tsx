@@ -6,7 +6,8 @@ interface Props {
 }
 
 export default function Products({ category }: Props) {
-  const products = ProductData[category];
+  //const products = ProductData[category];
+  console.log(category);
 
   return (
     <div>
