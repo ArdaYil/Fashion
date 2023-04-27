@@ -13,8 +13,6 @@ export default function Products({ category }: Props) {
 
   return (
     <div>
-      <Navigation />
-      <h1>Products</h1>
       <section className="products">
         {products.map((product) => (
           <ProductComponent {...product} />

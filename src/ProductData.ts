@@ -18,21 +18,21 @@ const productData: ProductDataInterface = {
       title: "Nike Airforce 1",
       id: "nike-airforce-1",
       price: 120,
-      colors: [Colors.WHITE, Colors.GRAY],
+      colors: [Colors.BLUE, Colors.GREEN],
     },
 
     "Nike Air Max": {
       title: "Nike Air Max",
       id: "nike-air-max",
       price: 220,
-      colors: [Colors.RED, Colors.GREEN, Colors.BLUE],
+      colors: [Colors.RED, Colors.YELLOW, Colors.CYAN],
     },
 
     "Nike Mercurial Vaper": {
       title: "Nike Mercurial Vaper",
       id: "nike-mercurial-vaper",
       price: 320,
-      colors: [Colors.CYAN, Colors.BEIGE],
+      colors: [Colors.CYAN, Colors.BLUE],
     },
   },
   adidas: {},

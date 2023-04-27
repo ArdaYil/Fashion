@@ -23,6 +23,14 @@
     color: var(--text-primary);
 }
 
+%btn--white {
+    @extend %btn;
+
+    background-color: var(--clr-secondary);
+    border-color: var(--clr-secondary);
+    color: var(--text-secondary);
+}
+
 %btn--outline {
     @extend %btn;
 
@@ -50,6 +58,17 @@
 
         &--outline {
             @extend %btn--orange;
+            @extend %btn--outline;
+
+            color: var(--text-primary);
+        }
+    }
+
+    &--white {
+        @extend %btn--white;
+
+        &--outline {
+            @extend %btn--white;
             @extend %btn--outline;
 
             color: var(--text-primary);
