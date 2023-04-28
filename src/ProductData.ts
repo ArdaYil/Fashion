@@ -29,7 +29,7 @@ const productData: ProductDataInterface = {
     },
 
     "Nike Mercurial Vaper": {
-      title: "Nike Mercurial Vaper",
+      title: "Nike Mercurial Vapor",
       id: "nike-mercurial-vaper",
       price: 320,
       colors: [Colors.CYAN, Colors.BLUE],

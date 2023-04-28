@@ -6,3 +6,21 @@
     font-size: u.fontSize(16, 24, 32);
     font-weight: 700;
 }
+
+.cart-circle {
+    position: relative;
+
+    &::before {
+        $size: 15;
+
+        position: absolute;
+        top: u.em(-10);
+        right: u.em(-5);
+        content: "";
+        background-color: cyan;
+        width: u.em($size);
+        height: u.em($size);
+        border-radius: 50%;
+        z-index: 100;
+    }
+}
