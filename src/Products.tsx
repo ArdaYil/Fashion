@@ -1,5 +1,4 @@
-import Navigation from "./components/Navigation";
-import ProductComponent from "./components/products/ProductComponent";
+import ProductComponent from "./components/products/productComponent";
 import ProductData from "./ProductData";
 import _ from "lodash";
 

@@ -1,6 +1,7 @@
 import Colors, { getBackgroundColorStyle } from "../../Colors";
 import ProductImageMapping from "../../ProductImageMapping";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Context } from "../../App";
 interface Props {
   id: string;
   title: string;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function ProductComponent({ title, price, colors, id }: Props) {
+  const { addProductToCart } = useContext(Context);
   const [currentColor, setCurrentColor] = useState<Colors>(colors[0]);
   const image = ProductImageMapping[id].get(currentColor);
 
@@ -35,7 +37,10 @@ export default function ProductComponent({ title, price, colors, id }: Props) {
             ></div>
           ))}
         </div>
-        <button className="products__product__add-to-cart btn--white--outline">
+        <button
+          onClick={() => addProductToCart(id, currentColor)}
+          className="products__product__add-to-cart btn--white--outline"
+        >
           Add to Cart
         </button>
       </section>

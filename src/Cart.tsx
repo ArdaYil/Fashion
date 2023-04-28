@@ -1,3 +1,4 @@
+import CartProduct from "./components/cart/CartProduct";
 import Navigation from "./components/Navigation";
 import ProductInCartInterface from "./interfaces/ProductInCartInterface";
 
@@ -6,9 +7,15 @@ interface Props {
 }
 
 export default function Cart({ cart }: Props) {
+  const renderCart = () => {
+    return cart.map((product) => <CartProduct product={product} />);
+  };
+
+  const renderEmptyCart = () => <h1 className="empty-cart">Cart is empty</h1>;
+
   return (
-    <div>
-      <h1>Cart</h1>
-    </div>
+    <section className="cart-page">
+      {cart.length == 0 ? renderEmptyCart() : renderCart()}
+    </section>
   );
 }

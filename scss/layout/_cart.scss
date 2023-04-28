@@ -1,0 +1,17 @@
+
+@use "../util"  as u;
+
+.cart-page {
+    min-height: 50vh;
+    grid-template-columns: 1fr;
+}
+
+.cart__product {
+    
+}
+
+.empty-cart {
+    font-size: u.fontSize(20, 18, 32);
+    font-weight: 600;
+    text-align: center;
+}

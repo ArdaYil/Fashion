@@ -41,6 +41,14 @@ const productData: ProductDataInterface = {
   "new balance": {},
 };
 
+const getProductDataFromId = (id: string) => {
+  for (let i in productData) {
+    for (let y in productData[i]) {
+      if (productData[i][y].id == id) return productData[i][y];
+    }
+  }
+};
+
 export default productData;
 
-export { ProductDataInterface };
+export { ProductDataInterface, getProductDataFromId };

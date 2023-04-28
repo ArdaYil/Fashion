@@ -1,6 +1,6 @@
 import ProductBrand from "./ProductBrand";
 import { useContext } from "react";
-import { CategoryContext } from "../../App";
+import { Context } from "../../App";
 
 const productBrands = [
   {
@@ -26,7 +26,7 @@ const productBrands = [
 ];
 
 export default function ProductBrands() {
-  const handleCategoryChange = useContext(CategoryContext);
+  const { handleCategoryChange } = useContext(Context);
 
   return (
     <section className="product-brands">
