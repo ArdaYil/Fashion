@@ -4,6 +4,7 @@
 .footer {
     display: grid;
     grid-template-columns: 1fr;
+    margin-bottom: u.em(20);
 
     &__section {
         display: flex;

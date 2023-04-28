@@ -1,4 +1,6 @@
 import ProductBrand from "./ProductBrand";
+import { useContext } from "react";
+import { CategoryContext } from "../../App";
 
 const productBrands = [
   {
@@ -24,10 +26,12 @@ const productBrands = [
 ];
 
 export default function ProductBrands() {
+  const handleCategoryChange = useContext(CategoryContext);
+
   return (
     <section className="product-brands">
       {productBrands.map((brand) => (
-        <ProductBrand {...brand} />
+        <ProductBrand {...brand} onBuyClicked={handleCategoryChange} />
       ))}
     </section>
   );
