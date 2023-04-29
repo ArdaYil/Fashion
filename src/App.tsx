@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Cart from "./Cart";
 import Homepage from "./Homepage";
 import Products from "./Products";
@@ -9,15 +9,18 @@ import ProductInCartInterface from "./interfaces/ProductInCartInterface";
 import Colors from "./Colors";
 import { getProductDataFromId } from "./ProductData";
 import ProductImageMapping from "./ProductImageMapping";
+import NotFound from "./NotFound";
 
 interface ContextInterface {
   handleCategoryChange: (value: string) => void;
   addProductToCart: (id: string, color: Colors) => void;
+  removeProductFromCart: (product: ProductInCartInterface) => void;
 }
 
 export const Context = React.createContext<ContextInterface>({
   handleCategoryChange: () => {},
   addProductToCart: () => {},
+  removeProductFromCart: () => {},
 });
 
 function App() {
@@ -45,7 +48,6 @@ function App() {
 
   const addProductToCart = (id: string, color: Colors) => {
     const index = findProductWithCombination({ id, color });
-
     if (index != -1) {
       const product = { ...cart[index] };
       product.amount++;
@@ -54,6 +56,8 @@ function App() {
       newCart[index] = product;
 
       updateCart(newCart);
+
+      return;
     }
 
     const productData = getProductDataFromId(id);
@@ -77,9 +81,14 @@ function App() {
     updateCart([...cart, newProduct]);
   };
 
+  const removeProductFromCart = (product: ProductInCartInterface) => {
+    updateCart(cart.filter((p) => p != product));
+  };
+
   const contextObject = {
-    handleCategoryChange: handleCategoryChange,
-    addProductToCart: addProductToCart,
+    handleCategoryChange,
+    addProductToCart,
+    removeProductFromCart,
   };
 
   return (
@@ -88,8 +97,10 @@ function App() {
       <Context.Provider value={contextObject}>
         <Routes>
           <Route path="/cart" element={<Cart cart={cart} />} />
-          <Route path="/products" element={<Products category={category} />} />
+          <Route path="/products/:id" element={<Products />} />
+          <Route path="/products" element={<Navigate to="/not-found" />} />
           <Route path="/" element={<Homepage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Context.Provider>
       <Footer />

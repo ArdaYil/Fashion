@@ -1,0 +1,13 @@
+
+@use "../util" as u;
+
+.not-found {
+    min-height: var(--mobile-min-height);
+
+    &__heading {
+        text-align: center;
+        font-size: u.fontSize(20, 24, 32);
+        margin-top: u.em(10);
+        font-weight: 600;
+    }
+}

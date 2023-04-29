@@ -16,7 +16,7 @@ export default function ProductBrand({ src, brand, alt, onBuyClicked }: Props) {
       <img src={src} alt={alt} className="product-brands__brand__image" />
       <Link
         onClick={handleClick}
-        to="/products"
+        to={`/products/${brand.toLowerCase()}`}
         className="btn--orange product-brands__brand__buy"
       >
         Buy Now!

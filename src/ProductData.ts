@@ -37,8 +37,7 @@ const productData: ProductDataInterface = {
   },
   adidas: {},
   converse: {},
-
-  "new balance": {},
+  newBalance: {},
 };
 
 const getProductDataFromId = (id: string) => {

@@ -8,7 +8,19 @@ interface Props {
 
 export default function Cart({ cart }: Props) {
   const renderCart = () => {
-    return cart.map((product) => <CartProduct product={product} />);
+    return (
+      <>
+        <h1 className="cart__heading">{`Amount of products: ${cart.length}`}</h1>
+        <div className="cart">
+          {cart.map((product) => (
+            <CartProduct
+              key={product.id + product.color + product.amount}
+              product={product}
+            />
+          ))}
+        </div>
+      </>
+    );
   };
 
   const renderEmptyCart = () => <h1 className="empty-cart">Cart is empty</h1>;

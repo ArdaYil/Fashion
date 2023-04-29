@@ -49,7 +49,7 @@
         }
 
         &__image {
-            width: u.em(300);
+            width: var(--product-width-mobile);
             margin-bottom: u.em(30);
             margin-inline: auto;
         }

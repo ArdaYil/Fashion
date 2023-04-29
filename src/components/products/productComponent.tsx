@@ -31,6 +31,7 @@ export default function ProductComponent({ title, price, colors, id }: Props) {
         <div className="products__product__color-btn-container">
           {colors.map((color) => (
             <div
+              key={color}
               onClick={() => handleColorChange(color)}
               className="products__product__color-btn"
               style={{ ...getBackgroundColorStyle(color) }}

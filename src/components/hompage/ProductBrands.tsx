@@ -19,7 +19,7 @@ const productBrands = [
     alt: "",
   },
   {
-    brand: "New Balance",
+    brand: "NewBalance",
     src: "../../../public/images/products/new balance/574/New Balance 574 Blue.webp",
     alt: "",
   },
@@ -31,7 +31,11 @@ export default function ProductBrands() {
   return (
     <section className="product-brands">
       {productBrands.map((brand) => (
-        <ProductBrand {...brand} onBuyClicked={handleCategoryChange} />
+        <ProductBrand
+          key={brand.brand}
+          {...brand}
+          onBuyClicked={handleCategoryChange}
+        />
       ))}
     </section>
   );
