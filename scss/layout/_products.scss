@@ -9,11 +9,25 @@
     padding-right: u.em(10);
     margin-top: u.em(25);
 
+    @include u.breakpoint-up(medium) {
+        grid-template-columns: repeat(2, 1fr);
+        padding-inline: u.em(20);
+        column-gap: u.em(50);
+        max-width: u.em(1000);
+        margin-inline: auto;
+        justify-items: center;
+    }
+
     &__product {
         display: flex;
         flex-direction: column;
         justify-content: center;
 
+        @include u.breakpoint-up(medium) {
+            justify-content: space-between;
+            width: fit-content;
+        }
+    
         &__heading {
             text-align: center;
             margin-bottom: u.em(10);
@@ -34,6 +48,10 @@
             margin-inline: auto;
             row-gap: u.em(10);
             place-items: center;
+
+            @include u.breakpoint-up(medium) {
+                
+            }
         }
 
         &__add-to-cart {
