@@ -23,3 +23,11 @@
 
     @return clamp(rem($min), rem($prefered) + $fontSizeIncrease, rem($max));
 }
+
+@function errorIfUnit($value) {
+    @if (not math.is-unitless($value)) {
+        @error("Input must be unitless");
+    }
+
+    @return $value;
+}

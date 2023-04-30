@@ -4,6 +4,10 @@ interface Props {
 
 export default function NavButton({ onClick }: Props) {
   return (
-    <img src="../../public/images/more.png" className="sm" onClick={onClick} />
+    <img
+      className="sm nav-bar__nav-btn"
+      src="../../public/images/more.png"
+      onClick={onClick}
+    />
   );
 }

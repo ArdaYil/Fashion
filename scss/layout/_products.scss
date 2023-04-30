@@ -38,6 +38,7 @@
 
         &__add-to-cart {
             font-size: u.fontSize(16, 12, 20);
+            white-space: nowrap;
         }
 
         &__color-btn {
@@ -52,6 +53,20 @@
             width: var(--product-width-mobile);
             margin-bottom: u.em(30);
             margin-inline: auto;
+        }
+
+        &__size-input {
+            background-color: black;
+            border: 1px solid white;
+            min-height: u.em(40);
+            color: white;
+            font-weight: 600;
+            padding: u.em(5);
+            font-size: u.rem(16);
+            border-radius: u.em(5);
+            overflow: hidden;
+            outline: none;
+            
         }
 
         &__color-btn-container {

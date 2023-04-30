@@ -1,0 +1,42 @@
+
+
+@use "functions" as f;
+@use "sass:math";
+
+$breakpoints: (
+    "medium": 689,
+    "large": 1200,
+    "xlarge": 1900,
+);
+
+@mixin breakpoint-up($size) {
+    @media screen and (min-width: f.em(map-get($breakpoints, $size))) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    $newSize: map-get($breakpoints, $size) - 0.02;
+
+    @media screen and (max-width: f.em($newSize)) {
+        @content;
+    }
+}
+
+@mixin custom-up($size) {
+    $a: f.errorIfUnit($size);
+    
+    @media screen and (min-width: f.em($size)) {
+        @content;
+    }
+}
+
+@mixin custom-down($size) {
+    $a: f.errorIfUnit($size);
+    
+    $newSize: $size - 0.02;
+
+    @media screen and (max-width: f.em($newSize)) {
+        @content;
+    }
+}

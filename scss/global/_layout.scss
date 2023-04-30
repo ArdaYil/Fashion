@@ -1,9 +1,0 @@
-
-
-@use "../util" as u;
-
-.nav-bar {
-    display: flex;
-    justify-content: space-between;
-    padding: u.em(30) u.em(30) u.em(30) u.em(20);
-}

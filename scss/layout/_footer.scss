@@ -6,13 +6,27 @@
     grid-template-columns: 1fr;
     margin-bottom: u.em(20);
 
+    @include u.breakpoint-up(medium) {
+        grid-template-columns: u.em(120) u.em(200) u.em(150) u.em(150);
+        max-width: u.em(600);
+        margin-inline: auto;
+    }
+
     &__section {
         display: flex;
         flex-direction: column;
         align-items: center;
 
+        @include u.breakpoint-up(medium) {
+            margin-left: u.em(20);
+        }
+
         &__text {
             margin-block: u.em(5);
+
+            @include u.breakpoint-up(medium) {
+                width: 100%;
+            }
         }
     }
 
@@ -26,6 +40,10 @@
     &__title-section {
         align-items: flex-start;
         margin-left: u.em(20);
+
+        @include u.breakpoint-up(medium) {
+            grid-column: span 4;
+        }
     }
 
     &__section-icon-container {
@@ -36,6 +54,12 @@
         margin-block: u.em(40);
         column-gap: u.em(20);
         justify-items: center;
+
+        @include u.breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: u.em(20);
+            margin-block: u.em(0);
+        }
     }
 
     &__title {

@@ -13,7 +13,7 @@ import NotFound from "./NotFound";
 
 interface ContextInterface {
   handleCategoryChange: (value: string) => void;
-  addProductToCart: (id: string, color: Colors) => void;
+  addProductToCart: (id: string, color: Colors, size: string) => void;
   removeProductFromCart: (product: ProductInCartInterface) => void;
 }
 
@@ -46,8 +46,8 @@ function App() {
     return -1;
   };
 
-  const addProductToCart = (id: string, color: Colors) => {
-    const index = findProductWithCombination({ id, color });
+  const addProductToCart = (id: string, color: Colors, size: string) => {
+    const index = findProductWithCombination({ id, color, size });
     if (index != -1) {
       const product = { ...cart[index] };
       product.amount++;
@@ -72,8 +72,8 @@ function App() {
       title: productData.title,
       id: id,
       amount: 1,
-      price: productData.price.toString(),
-      size: 43,
+      price: productData.price,
+      size: size,
       imgPath: image,
       color: color,
     };
@@ -82,7 +82,14 @@ function App() {
   };
 
   const removeProductFromCart = (product: ProductInCartInterface) => {
-    updateCart(cart.filter((p) => p != product));
+    console.log(cart);
+    const mappedCart = cart.map((p) =>
+      p == product ? { ...p, amount: p.amount - 1 } : p
+    );
+
+    console.log(mappedCart);
+
+    updateCart(mappedCart.filter((p) => p.amount > 0));
   };
 
   const contextObject = {
