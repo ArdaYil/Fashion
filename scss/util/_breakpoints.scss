@@ -6,7 +6,7 @@
 $breakpoints: (
     "medium": 750,
     "large": 1200,
-    "xlarge": 1900,
+    "xlarge": 1500,
 );
 
 @mixin breakpoint-up($size) {

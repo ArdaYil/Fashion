@@ -23,6 +23,8 @@ export const Context = React.createContext<ContextInterface>({
   removeProductFromCart: () => {},
 });
 
+document.title = "Fashion | Shop shoes from high end brands";
+
 function App() {
   const [category, setCurrentCategory] = useState<string>("");
   const [cart, updateCart] = useState<ProductInCartInterface[]>([]);

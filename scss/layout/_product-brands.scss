@@ -13,6 +13,16 @@
         padding-inline: u.em(20);
     }
 
+    @include u.breakpoint-up(large) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include u.breakpoint-up(xlarge) {
+        margin-top: u.em(100);
+        margin-bottom: u.em(120);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     &__brand {
         display: flex;
         flex-direction: column;

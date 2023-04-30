@@ -18,6 +18,10 @@
         padding-block: u.em(60);
     }
 
+    @include u.breakpoint-up(large) {
+        max-width: u.em(1000);
+    }
+
     &__image {
         width: u.em(300);
         margin-bottom: u.em(15);
@@ -25,6 +29,10 @@
         @include u.breakpoint-up(medium) {
             width: u.em(350);
             margin-right: u.em(30);
+        }
+
+        @include u.breakpoint-up(large) {
+            width: u.em(400);
         }
     }
 

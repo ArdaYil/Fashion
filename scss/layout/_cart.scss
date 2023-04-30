@@ -5,6 +5,10 @@
     min-height: var(--mobile-min-height);
     grid-template-columns: 1fr;
     text-align: center;
+
+    @include u.breakpoint-up(medium) {
+        min-height: var(--tablet-min-height);
+    }
 }
 
 .cart {

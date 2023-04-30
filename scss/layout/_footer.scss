@@ -12,6 +12,13 @@
         margin-inline: auto;
     }
 
+    @include u.breakpoint-up(large) {
+        max-width: u.em(800);
+        column-gap: u.em(30);
+        margin-left: u.em(50);
+        row-gap: u.em(30);
+    }
+
     &__section {
         display: flex;
         flex-direction: column;
@@ -59,6 +66,10 @@
             grid-template-columns: repeat(2, 1fr);
             gap: u.em(20);
             margin-block: u.em(0);
+        }
+
+        @include u.breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 

@@ -7,6 +7,7 @@
   --text-primary: var(--clr-secondary);
   --text-secondary: var(--clr-primary);
   --mobile-min-height: 50vh;
+  --tablet-min-height: 70vh;
   --product-width-mobile: 18.75em;
   --product-width-tablet: 16.75em;
 }
@@ -111,6 +112,11 @@ a {
     align-items: center;
   }
 }
+@media screen and (min-width: 75em) {
+  .nav-bar__nav-links {
+    gap: 2.5em;
+  }
+}
 .nav-bar__nav-link {
   font-size: clamp(1rem, 0.3125rem + 1.2vw, 1.25rem);
 }
@@ -142,6 +148,11 @@ a {
     padding-block: 3.75em;
   }
 }
+@media screen and (min-width: 75em) {
+  .hero {
+    max-width: 62.5em;
+  }
+}
 .hero__image {
   width: 18.75em;
   margin-bottom: 0.9375em;
@@ -150,6 +161,11 @@ a {
   .hero__image {
     width: 21.875em;
     margin-right: 1.875em;
+  }
+}
+@media screen and (min-width: 75em) {
+  .hero__image {
+    width: 25em;
   }
 }
 .hero__heading {
@@ -197,6 +213,18 @@ a {
     padding-inline: 1.25em;
   }
 }
+@media screen and (min-width: 75em) {
+  .product-brands {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 93.75em) {
+  .product-brands {
+    margin-top: 6.25em;
+    margin-bottom: 7.5em;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .product-brands__brand {
   display: flex;
   flex-direction: column;
@@ -224,6 +252,15 @@ a {
     grid-template-columns: 7.5em 12.5em 9.375em 9.375em;
     max-width: 37.5em;
     margin-inline: auto;
+  }
+}
+@media screen and (min-width: 75em) {
+  .footer {
+    max-width: 50em;
+    -moz-column-gap: 1.875em;
+         column-gap: 1.875em;
+    margin-left: 3.125em;
+    row-gap: 1.875em;
   }
 }
 .footer__section {
@@ -272,6 +309,11 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25em;
     margin-block: 0em;
+  }
+}
+@media screen and (min-width: 75em) {
+  .footer__section-icon-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .footer__title {
@@ -364,6 +406,11 @@ a {
   grid-template-columns: 1fr;
   text-align: center;
 }
+@media screen and (min-width: 46.875em) {
+  .cart-page {
+    min-height: var(--tablet-min-height);
+  }
+}
 
 .cart {
   display: grid;
@@ -435,6 +482,11 @@ a {
 
 .not-found {
   min-height: var(--mobile-min-height);
+}
+@media screen and (min-width: 46.875em) {
+  .not-found {
+    min-height: var(--tablet-min-height);
+  }
 }
 .not-found__heading {
   text-align: center;

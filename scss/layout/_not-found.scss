@@ -4,6 +4,10 @@
 .not-found {
     min-height: var(--mobile-min-height);
 
+    @include u.breakpoint-up(medium) {
+        min-height: var(--tablet-min-height);
+    }
+
     &__heading {
         text-align: center;
         font-size: u.fontSize(20, 24, 32);
