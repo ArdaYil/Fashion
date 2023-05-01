@@ -443,6 +443,19 @@ a {
     justify-items: center;
   }
 }
+@media screen and (min-width: 75em) {
+  .cart {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 93.75em;
+  }
+}
+@media screen and (min-width: 93.75em) {
+  .cart {
+    margin-top: 6.25em;
+    margin-bottom: 5em;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .cart__product {
   display: grid;
   grid-template-columns: var(--product-width-mobile) 2.5em;
