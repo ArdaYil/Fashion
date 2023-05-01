@@ -18,6 +18,17 @@
         justify-items: center;
     }
 
+    @include u.breakpoint-up(large) {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: u.em(1500);
+    }
+
+    @include u.breakpoint-up(xlarge) {
+        margin-top: u.em(100);
+        margin-bottom: u.em(120);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     &__product {
         display: flex;
         flex-direction: column;
