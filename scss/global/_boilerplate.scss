@@ -44,3 +44,11 @@ a {
 .list {
     list-style: none;
 }
+
+select {
+    &:hover {
+        box-shadow: u.em(0) u.em(0) u.em(10) u.em(1) white;
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+}

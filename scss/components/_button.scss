@@ -3,8 +3,17 @@
 
 %btn {
     border-radius: u.em(10);
-    padding: u.em(10) u.em(20);
+    padding: u.em(9) u.em(18);
     width: fit-content;
+    transition: background-color 300ms;
+    border-width: u.em(2);
+    border-style: solid;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: u.em(0) u.em(0) u.em(10) u.em(1) white;
+        transform: scale(1.01)
+    }
 }
 
 %btn--black {
@@ -35,8 +44,6 @@
     @extend %btn;
 
     background: none;
-    border-width: u.em(2);
-    border-style: solid;
 }
 
 .btn {
@@ -50,11 +57,21 @@
             @extend %btn--outline;
 
             color: var(--text-secondary);
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
         }
     }
 
     &--orange {
         @extend %btn--orange;
+
+        &:hover {
+            @extend %btn--orange;
+            @extend %btn--outline;
+        }
 
         &--outline {
             @extend %btn--orange;

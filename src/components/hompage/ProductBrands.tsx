@@ -10,7 +10,7 @@ const productBrands = [
   },
   {
     brand: "Adidas",
-    src: "../../../public/images/products/adidas/barricade/Adidas Barricade Purple.webp",
+    src: "../../../public/images/products/adidas/ultraboost/Adidas Ultraboost Red.webp",
     alt: "",
   },
   {

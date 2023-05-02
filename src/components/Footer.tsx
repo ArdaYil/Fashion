@@ -39,9 +39,9 @@ export default function Footer() {
       </section>
       <section className="footer__section footer__title-section">
         <Title className="nav-bar__title footer__title" />
-        <Link to="/" className="footer__section__text">
+        <p className="footer__section__text">
           &copy; 2023 Fashion. All Rights Reserved
-        </Link>
+        </p>
       </section>
     </footer>
   );
