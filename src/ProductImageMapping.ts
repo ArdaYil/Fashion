@@ -154,7 +154,7 @@ newBalance574.set(
   "../public/images/products/new balance/574/New Balance 574 Blue.webp"
 );
 newBalance574.set(
-  Colors.BEIGE,
+  Colors.GREEN,
   "../public/images/products/new balance/574/New Balance 574 Green.webp"
 );
 newBalance574.set(
