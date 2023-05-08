@@ -32,10 +32,10 @@ export default function Footer() {
         </Link>
       </section>
       <section className="footer__section footer__section-icon-container">
-        <img className="footer__icon" src="../../public/icons/discord.png" />
-        <img className="footer__icon" src="../../public/icons/twitter.png" />
-        <img className="footer__icon" src="../../public/icons/facebook.png" />
-        <img className="footer__icon" src="../../public/icons/instagram.png" />
+        <img className="footer__icon" src="/icons/discord.png" />
+        <img className="footer__icon" src="/icons/twitter.png" />
+        <img className="footer__icon" src="/icons/facebook.png" />
+        <img className="footer__icon" src="/icons/instagram.png" />
       </section>
       <section className="footer__section footer__title-section">
         <Title className="nav-bar__title footer__title" />

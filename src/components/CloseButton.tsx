@@ -9,7 +9,7 @@ export default function CloseButton({ onClick, className }: Props) {
   return (
     <img
       className={closeClass}
-      src="../../public/images/close.png"
+      src="/images/close.png"
       alt="An image of a close button looking like an X"
       onClick={onClick}
     />

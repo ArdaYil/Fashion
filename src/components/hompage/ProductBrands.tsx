@@ -5,22 +5,22 @@ import { Context } from "../../App";
 const productBrands = [
   {
     brand: "Nike",
-    src: "../../../public/images/products/nike/jordans/Red Nike Jordans.webp",
+    src: "/images/products/nike/jordans/Red Nike Jordans.webp",
     alt: "",
   },
   {
     brand: "Adidas",
-    src: "../../../public/images/products/adidas/ultraboost/Adidas Ultraboost Red.webp",
+    src: "/images/products/adidas/ultraboost/Adidas Ultraboost Red.webp",
     alt: "",
   },
   {
     brand: "Converse",
-    src: "../../../public/images/products/converse/chuck taylor/Converse Chuck Taylor Black.webp",
+    src: "/images/products/converse/chuck taylor/Converse Chuck Taylor Black.webp",
     alt: "",
   },
   {
     brand: "NewBalance",
-    src: "../../../public/images/products/new balance/574/New Balance 574 Blue.webp",
+    src: "/images/products/new balance/574/New Balance 574 Blue.webp",
     alt: "",
   },
 ];

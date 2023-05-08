@@ -10,7 +10,7 @@ export default function CartButton({ cart }: Props) {
 
   return (
     <Link className={cartClassName} to="/cart">
-      <img className="sm" src="../../public/images/cart.png" />
+      <img className="sm" src="/images/cart.png" />
     </Link>
   );
 }

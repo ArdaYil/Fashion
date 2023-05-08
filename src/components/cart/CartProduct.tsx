@@ -15,7 +15,7 @@ export default function CartProduct({ product }: Props) {
       <img className="cart__product__image" src={imgPath} />
       <img
         onClick={() => removeProductFromCart(product)}
-        src="../../../public/icons/close.png"
+        src="/icons/close.png"
         alt="An image of an X for a close button"
         className="cart__product__close"
       />

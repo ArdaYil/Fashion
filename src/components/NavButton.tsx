@@ -6,7 +6,7 @@ export default function NavButton({ onClick }: Props) {
   return (
     <img
       className="sm nav-bar__nav-btn"
-      src="../../public/images/more.png"
+      src="/images/more.png"
       onClick={onClick}
     />
   );
