@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero">
       <img
         className="hero__image"
-        src="/public/images/products/nike/jordans/Nike Jordans Orange.webp"
+        src="/images/products/nike/jordans/Nike Jordans Orange.webp"
       />
       <article className="hero__content">
         <h2 className="hero__heading heading-1">
