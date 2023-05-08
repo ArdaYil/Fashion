@@ -25,9 +25,14 @@ export const Context = React.createContext<ContextInterface>({
 
 document.title = "Fashion | Shop shoes from high end brands";
 
+const itemsString = localStorage.getItem("items") || "[]";
+const items = JSON.parse(itemsString) as ProductInCartInterface[];
+
+console.log(items);
+
 function App() {
   const [category, setCurrentCategory] = useState<string>("");
-  const [cart, updateCart] = useState<ProductInCartInterface[]>([]);
+  const [cart, updateCart] = useState<ProductInCartInterface[]>(items);
 
   const handleCategoryChange = (value: string) => setCurrentCategory(value);
 
@@ -59,6 +64,8 @@ function App() {
 
       updateCart(newCart);
 
+      localStorage.setItem("items", JSON.stringify(newCart));
+
       return;
     }
 
@@ -80,7 +87,11 @@ function App() {
       color: color,
     };
 
-    updateCart([...cart, newProduct]);
+    const newCart = [...cart, newProduct];
+
+    updateCart(newCart);
+
+    localStorage.setItem("items", JSON.stringify(newCart));
   };
 
   const removeProductFromCart = (product: ProductInCartInterface) => {
@@ -89,9 +100,11 @@ function App() {
       p == product ? { ...p, amount: p.amount - 1 } : p
     );
 
-    console.log(mappedCart);
+    const newCart = mappedCart.filter((p) => p.amount > 0);
 
-    updateCart(mappedCart.filter((p) => p.amount > 0));
+    updateCart(newCart);
+
+    localStorage.setItem("items", JSON.stringify(newCart));
   };
 
   const contextObject = {
