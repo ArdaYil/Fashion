@@ -121,7 +121,6 @@ function App() {
           <Route path="/cart" element={<Cart cart={cart} />} />
           <Route path="/products/:id" element={<Products />} />
           <Route path="/" element={<Homepage />} />
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </Context.Provider>
       <Footer />
