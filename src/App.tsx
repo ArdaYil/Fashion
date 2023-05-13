@@ -118,7 +118,11 @@ function App() {
       <Navigation cart={cart} />
       <Context.Provider value={contextObject}>
         <Routes>
-          <Route path="*" element={<Homepage />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route path="/products/:id" element={<Products />} />
+          <Route path="/products" element={<Navigate to="/not-found" />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Context.Provider>
       <Footer />
